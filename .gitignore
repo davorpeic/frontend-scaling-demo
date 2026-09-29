@@ -1,0 +1,18 @@
+node_modules
+.next
+storybook-static
+.DS_Store
+*.log
+.vite
+**/.vite
+*.tsbuildinfo
+.turbo
+apps/shell/AGENTS.md
+apps/shell/CLAUDE.md
+
+# Built artifacts — keep the Vue MFE dist so the demo is clone-and-run
+**/dist
+!apps/account/dist
+!apps/account/dist/**
+
+DEMO.md

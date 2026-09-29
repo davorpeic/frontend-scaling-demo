@@ -1,0 +1,6 @@
+@theme {
+  --color-brand: oklch(0.55 0.18 250);
+  --color-brand-foreground: oklch(0.99 0 0);
+  --font-display: "Georgia", ui-serif, serif;
+  --spacing-card: 1.25rem;
+}

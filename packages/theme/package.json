@@ -1,0 +1,9 @@
+{
+  "name": "@demo/theme",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/theme.css"
+  }
+}

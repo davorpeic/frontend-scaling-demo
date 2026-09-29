@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "@demo/theme";
+@import "@demo/ui/styles.css";
+@import "@demo/shop/styles.css";
+
+@theme {
+  --color-brand: oklch(0.52 0.24 290); /* shell override */
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
