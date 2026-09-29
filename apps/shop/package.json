@@ -29,6 +29,6 @@
     "storybook": "10.6.0",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
-    "vite-plus": "0.3.2"
+    "vite-plus": "catalog:"
   }
 }

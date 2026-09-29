@@ -26,6 +26,6 @@
     "@vitejs/plugin-vue": "6.0.9",
     "storybook": "10.6.0",
     "typescript": "catalog:",
-    "vite-plus": "0.3.2"
+    "vite-plus": "catalog:"
   }
 }
