@@ -12,8 +12,7 @@ catalog:
   '@types/react-dom': 19.3.0
   tailwindcss: 4.3.3
   typescript: 6.0.3
-  vite: npm:@voidzero-dev/vite-plus-core@0.3.2
-  vite-plus: 0.3.2
+  vite-plus: 1.0.0
 
 minimumReleaseAgeExclude:
   - '@vue/compiler-core@3.5.43'
@@ -28,5 +27,5 @@ minimumReleaseAgeExclude:
   - vue@3.5.43
 
 overrides:
-  vite: npm:@voidzero-dev/vite-plus-core@0.3.2
+  vite: npm:@voidzero-dev/vite-plus-core@1.0.0
   vitest: 4.1.11
