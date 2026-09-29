@@ -74,6 +74,53 @@ packages/
 
 Every workspace member is a pnpm package. Shop and Account are still microfrontends because a team owns them as frontend capabilities.
 
+## Example: create a package
+
+Create a reusable library (not a microfrontend) and wire it into the shell:
+
+```bash
+vp create vite:library
+```
+
+Use name `@demo/utils` and directory `packages/utils`. Add a small helper, for example `formatPrice`:
+
+```ts
+// packages/utils/src/format-price.ts
+export function formatPrice(cents: number) {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(cents / 100);
+}
+```
+
+```ts
+// packages/utils/src/index.ts
+export { formatPrice } from './format-price';
+```
+
+Then add the package to the shell:
+
+```bash
+vp add @demo/utils --filter @demo/shell --workspace
+```
+
+Also add `@demo/utils` to `apps/shell/next.config.ts` `transpilePackages`, then import and use it in `apps/shell/app/page.tsx`.
+
+If you skip the generator, a minimal `packages/utils/package.json` looks like:
+
+```json
+{
+  "name": "@demo/utils",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
+```
+
 ## Tooling split
 
 - **pnpm** — workspace, lockfile, `workspace:*`, catalogs
